@@ -1,438 +1,358 @@
 {
-	"info": {
-		"_postman_id": "2349a4ea-98df-48ea-aa4b-f43fe1d836a5",
-		"name": "orbitass",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "28015442"
-	},
-	"item": [
-		{
-			"name": "getTransactionsWithUserDetails",
-			"item": [
-				{
-					"name": "Fetch All Transactions Without Filters",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionsWithUserDetails"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by Status",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?status=failed",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionsWithUserDetails"
-							],
-							"query": [
-								{
-									"key": "status",
-									"value": "failed"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by Multiple Statuses",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?status=failed,success",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionsWithUserDetails"
-							],
-							"query": [
-								{
-									"key": "status",
-									"value": "failed,success"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by Type",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?type=debit",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionsWithUserDetails"
-							],
-							"query": [
-								{
-									"key": "type",
-									"value": "debit"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by Status and Type",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?status=success&type=credit",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionsWithUserDetails"
-							],
-							"query": [
-								{
-									"key": "status",
-									"value": "success"
-								},
-								{
-									"key": "type",
-									"value": "credit"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by Date Range",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?from=2023-01-01&to=2023-12-31",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionsWithUserDetails"
-							],
-							"query": [
-								{
-									"key": "from",
-									"value": "2023-01-01"
-								},
-								{
-									"key": "to",
-									"value": "2023-12-31"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Pagination Only",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?page=2&limit=5",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionsWithUserDetails"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2"
-								},
-								{
-									"key": "limit",
-									"value": "5"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "getTransactionsByUserId",
-			"item": [
-				{
-					"name": "Filter by Status, Type, and Date Range",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d?status=failed,success&type=debit&from=2023-01-01&to=2023-12-31",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionByUserId",
-								"677aeb6c1a81144a53d7924d"
-							],
-							"query": [
-								{
-									"key": "status",
-									"value": "failed,success"
-								},
-								{
-									"key": "type",
-									"value": "debit"
-								},
-								{
-									"key": "from",
-									"value": "2023-01-01"
-								},
-								{
-									"key": "to",
-									"value": "2023-12-31"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by Status and Type",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d?status=failed&type=credit",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionByUserId",
-								"677aeb6c1a81144a53d7924d"
-							],
-							"query": [
-								{
-									"key": "status",
-									"value": "failed"
-								},
-								{
-									"key": "type",
-									"value": "credit"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Filter by Date Range",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d?from=2023-01-01&to=2023-12-31",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionByUserId",
-								"677aeb6c1a81144a53d7924d"
-							],
-							"query": [
-								{
-									"key": "from",
-									"value": "2023-01-01"
-								},
-								{
-									"key": "to",
-									"value": "2023-12-31"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Fetch All Transactions for a User",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"transaction",
-								"getTransactionByUserId",
-								"677aeb6c1a81144a53d7924d"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "getUser",
-			"item": [
-				{
-					"name": "Get user by Id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://orbitass-447000.el.r.appspot.com/api/v1/user/getUser/677aeb6c1a81144a53d7924d",
-							"protocol": "https",
-							"host": [
-								"orbitass-447000",
-								"el",
-								"r",
-								"appspot",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"user",
-								"getUser",
-								"677aeb6c1a81144a53d7924d"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Health",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://orbitass-447000.el.r.appspot.com/health",
-					"protocol": "https",
-					"host": [
-						"orbitass-447000",
-						"el",
-						"r",
-						"appspot",
-						"com"
-					],
-					"path": [
-						"health"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "2349a4ea-98df-48ea-aa4b-f43fe1d836a5",
+    "name": "orbitass",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28015442"
+  },
+  "item": [
+    {
+      "name": "getTransactionsWithUserDetails",
+      "item": [
+        {
+          "name": "Fetch All Transactions Without Filters",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionsWithUserDetails"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?status=failed",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionsWithUserDetails"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "failed"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by Multiple Statuses",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?status=failed,success",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionsWithUserDetails"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "failed,success"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?type=debit",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionsWithUserDetails"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "debit"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by Status and Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?status=success&type=credit",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionsWithUserDetails"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "success"
+                },
+                {
+                  "key": "type",
+                  "value": "credit"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by Date Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?from=2023-01-01&to=2023-12-31",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionsWithUserDetails"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "2023-01-01"
+                },
+                {
+                  "key": "to",
+                  "value": "2023-12-31"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagination Only",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionsWithUserDetails?page=2&limit=5",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionsWithUserDetails"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "getTransactionsByUserId",
+      "item": [
+        {
+          "name": "Filter by Status, Type, and Date Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d?status=failed,success&type=debit&from=2023-01-01&to=2023-12-31",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionByUserId",
+                "677aeb6c1a81144a53d7924d"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "failed,success"
+                },
+                {
+                  "key": "type",
+                  "value": "debit"
+                },
+                {
+                  "key": "from",
+                  "value": "2023-01-01"
+                },
+                {
+                  "key": "to",
+                  "value": "2023-12-31"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by Status and Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d?status=failed&type=credit",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionByUserId",
+                "677aeb6c1a81144a53d7924d"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "failed"
+                },
+                {
+                  "key": "type",
+                  "value": "credit"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by Date Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d?from=2023-01-01&to=2023-12-31",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionByUserId",
+                "677aeb6c1a81144a53d7924d"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "2023-01-01"
+                },
+                {
+                  "key": "to",
+                  "value": "2023-12-31"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fetch All Transactions for a User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/transaction/getTransactionByUserId/677aeb6c1a81144a53d7924d",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "transaction",
+                "getTransactionByUserId",
+                "677aeb6c1a81144a53d7924d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "getUser",
+      "item": [
+        {
+          "name": "Get user by Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://orbitass-447000.el.r.appspot.com/api/v1/user/getUser/677aeb6c1a81144a53d7924d",
+              "protocol": "https",
+              "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "getUser",
+                "677aeb6c1a81144a53d7924d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://orbitass-447000.el.r.appspot.com/health",
+          "protocol": "https",
+          "host": ["orbitass-447000", "el", "r", "appspot", "com"],
+          "path": ["health"]
+        }
+      },
+      "response": []
+    }
+  ]
 }
