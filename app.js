@@ -8,10 +8,9 @@ async function startServer() {
 
   await loader({ expressApp: app });
 
-  console.log(process.env.PORT);
-
-  app.listen(3000, (err) => {
+  app.listen(process.env.PORT || 3000, (err) => {
     if (err) {
+      console.log("logging Error");
       console.log(err);
       return;
     }
